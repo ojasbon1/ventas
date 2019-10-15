@@ -1,0 +1,29 @@
+<div><%= @good.name %></div>
+
+
+<br> <br>
+<%= link_to "Delete", good_path(@good), 
+method: :delete,
+data:{confirm:"Are you sure"} %> <br> <br>
+
+<div class="description"><%= @good.name %>
+<%= @good.price %></div>
+
+ <div>
+        <label>description:</label>
+        <%= @good.description %>
+        </div>
+
+        <label>Price:</label>
+        <%=  @good.price %>
+
+    <br> <br>
+    
+    <% if @good.picture.attached? %>
+    <%= image_tag(@good.picture, height: 200, class: "good") %>
+<% end %>
+    
+    <div><%=link_to "Main Menu", goods_path %></div>
+<br> <br>
+    
+    

@@ -1,0 +1,10 @@
+<h1>Buy & Sell !!!</h1>
+
+<%=link_to "Enter New Product", new_good_path %>
+
+
+<% @goods.each do |good| %>
+
+
+    <li><%= link_to good.name, "/goods/#{good.id}" %> </li>
+<% end %>
